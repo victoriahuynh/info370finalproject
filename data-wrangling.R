@@ -1,0 +1,1 @@
+listings <- read.csv('./data/listings.csv', stringsAsFactors=FALSE)
