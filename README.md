@@ -2,6 +2,10 @@
 
 > Jill Nguyen, Pooja Ramanathan, Shiva Rithwick, Victoria Huynh
 
+## Project Link
+
+https://victoriahuynh.github.io/info370finalproject/
+
 ## Project Description
 
 ### What is the overarching purpose of your research project, and why is it an important undertaking?
