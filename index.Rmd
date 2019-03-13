@@ -18,7 +18,7 @@ Using this resource, we want to answer **how various facets of the Seattle Airbn
 In this resource, we will specifically look at the Airbnb market in various Seattle neighborhoods from 2011 to 2019.  
 
 ## Our Dataset
-The dataset we are using is provided by [Inside Airbnb](http://insideairbnb.com/get-the-data.html) (2019). It includes information about Airbnb listings in Seattle. It has been cleaned to remove columns not relevant to our research. {We also added X new columns: `x`, `x`, and `x`. (add if true)}  
+The dataset we are using is provided by [Inside Airbnb](http://insideairbnb.com/get-the-data.html) (2019). It includes information about Airbnb listings in Seattle. It has been cleaned to remove columns not relevant to our research. We also added the new columns of "nights_per_year" and "occupancy_rate", which were calculating using algorithms Inside Airbnb uses in its analyses of cities. The columns themselves were calculated using average reviews per month and the minimum number of nights stayed per listing.
 
 
 ## Data Exploration
