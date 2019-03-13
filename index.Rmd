@@ -29,17 +29,28 @@ We did a further exploration on our dataset to familiarize ourselves with its va
 
 ![Airbnb Pricing Across Neighborhoods](img/neighborhoodprice.png)
 
+Our first plot looks at the distribution of prices of Airbnb for different Seattle neighborhoods. Noticably, the median price for the Downtown neighborhood is highest, while the lowest median price seems to be in Delridge.
+
 ![Room Types Across Neighborhoods](img/neighborhoodroomtype.png)
 
+Next, we explore the distribution of room types in Airbnbs across neighborhoods. According to InsideAirbnb, depending on the room type of an airbnb listing, the property could be being used more like a hotel, or be taking away potential housing for people in the area.
+
 ![Room Types Pricing](img/roomtypeprice.png)
+We also can break down the pricing for the various room types, and unsurprisingly, the entire house or apartment listings are much more expensive.
 
 ![Number of Listings Per Host](img/listingsperhost.png)
+We also break down the number of listings held by Airbnb hosts in Seattle. While the majority of owners appear to only have one listing, when you break the listings down by how many multilistings are held, the results look drastically different.
 
 ![Most Airbnb Listings Held Per Host](img/mostlistings.png)
 
+Here is a table displaying the most listings held by various hosts in Seattle. From this table, we can see that the top hosts have a shocking number of listings, providing evidence towards their Airbnb account being run like a business. Many of the host names seem to resemble business names as well.
+
 ![Multi-Listing Pie Chart](img/multilistings.png) 
 
+This pie chart shows that the number of properties which are under a multilisting owner nearly outnumber those that are just single listings.
+
 ![Occupancy Rates in Seattle](img/occupancyrate.png)
+Using InsideAirbnb's metric based on average number of reviews per month and nights spent in a listing per year, we calculated occupancy rates for properties in Seattle. It is clear that there is a downward trend of occupancy rates for listings, and yet at the peak capacity for occupancy, the number of listings with high occupancy skyrockets.
 
 
 ```{r include=FALSE}
