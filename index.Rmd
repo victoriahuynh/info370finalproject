@@ -22,15 +22,15 @@ Below is a sample of our dataset.
 ## Data Exploration
 We did a further exploration on our dataset to familiarize ourselves with its variables.
 
-First, we wanted to see how Airbnb listings were distributed in Seattle.  
-{VIZ}  
-We noticed that {DISCOVERY}.
+![Airbnb Pricing Across Neighborhoods](img/neighborhoodprice.png)
 
-We then sought to see whether there was a relationship between the housing price hikes in neighborhoods and the Airbnb listings of Seattle. In order to do this, we researched and found out {PRICE HIKE INFO}. [cite]()  
-{VIZ}  
-We discovered that {DISCOVERY}.
+![Room Types Across Neighborhoods](img/neighborhoodroomtype.png)
 
-Our most significant findings told us {FINDINGS}.
+![Number of Listings Per Host](img/listingsperhost.png)
+
+![Most Airbnb Listings Held Per Host](img/mostlistings.png)
+
+![Multi-Listing Pie Chart](img/multilistings.png) 
 
 ## Modeling
 We used {MODEL} model to predict whether or not a listing was used for personal{FIX WORDING?} or commercial purposes.  
