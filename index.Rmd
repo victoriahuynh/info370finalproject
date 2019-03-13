@@ -1,5 +1,5 @@
 ---
-title: "Impact of Airbnb on Seattle's Neighborhoods"
+title: "Examining the Airbnb Market in Seattle's Neighborhoods"
 output: html_document
 ---
 
@@ -11,14 +11,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ## Introduction
-As home-sharing rental sites become more popular, the housing market of urban areas change more and more. Gentrification is a rising problem in many American cities today. While gentrification is usually attributed to an influx of new affluent residents into a neighborhood, the purchase of properties in a neighborhood solely to house short-term visitors may also be an overlooked factor. Since gentrification is a difficult topic to address, we decided to instead focus on the general state of the Airbnb market in Seattle today and how it may be indicative of an overall commercialization of the short-term rental market.
+As home-sharing rental sites become more popular, the housing market of urban areas change more and more. Gentrification is a rising problem in many American cities today. While gentrification is usually attributed to an influx of new affluent residents into a neighborhood, the purchase of properties in a neighborhood solely to house short-term visitors may also be an overlooked factor. In essence, "the growth of short-term rentals is closely tied to the broader financialisation of housing that makes housing a commodity, erodes the neighborhood identity, attracts new investors for buying or developing more and more units, which in turn increases the scarcity of housing, prompts landlords to raise rent, threatens community bonds and stretches neighbourhood services". [(Bernardi)](https://labgov.city/thecommonspost/the-impact-of-airbnb-on-our-cities-gentrification-and-disneyfication-2-0/) However, since gentrification is a difficult topic to address, we decided to instead focus on the general state of the Airbnb market in Seattle today and how it may be indicative of an overall commercialization of the short-term rental market, as cities that have prominent tourism, such as Seattle, may attract commercialism.
 
-Using this resource, we want to answer **how various facets of the Seattle Airbnb market reflect an overall commercialization of properties in the area**.  
+Using this resource, we want to answer **how various facets of the Seattle Airbnb market reflect an overall commercialization of properties in the area**. We also want to see if we can **predict what variables of Airbnb listings influence pricings the most** and **if we can predict which of the Airbnb ventures in Seattle are "commercial ventures"**.
 
 In this resource, we will specifically look at the Airbnb market in various Seattle neighborhoods from 2011 to 2019.  
 
 ## Our Dataset
-The dataset we are using is provided by [Inside Airbnb](http://insideairbnb.com/get-the-data.html) (2019). It includes information about Airbnb listings in Seattle. It has been cleaned to remove columns not relevant to our research. We also added the new columns of "nights_per_year" and "occupancy_rate", which were calculating using algorithms Inside Airbnb uses in its analyses of cities. The columns themselves were calculated using average reviews per month and the minimum number of nights stayed per listing.
+The dataset we are using is provided by [Inside Airbnb](http://insideairbnb.com/get-the-data.html) (2019). It includes information about Airbnb listings in Seattle. They state that this data is sourced from publicly available information from the Airbnb website, and has been analyzed, cleansed and aggregated where appropriate to faciliate public discussion. The datasets contain listing information, calendar dates for listings, reviews for listings, and a list of neighborhoods in the city. It has been cleaned by us to remove columns not relevant to our research. We also added the new columns of "nights_per_year" and "occupancy_rate", which were calculating using algorithms Inside Airbnb uses in its analyses of cities. The columns themselves were calculated using average reviews per month and the minimum number of nights stayed per listing.
 
 
 ## Data Exploration
