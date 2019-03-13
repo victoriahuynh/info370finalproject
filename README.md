@@ -1,4 +1,4 @@
-# info370finalproject
+# Looking at the Airbnb Market in Seattle
 
 > Jill Nguyen, Pooja Ramanathan, Shiva Rithwick, Victoria Huynh
 
