@@ -24,31 +24,31 @@ The dataset we are using is provided by [Inside Airbnb](http://insideairbnb.com/
 ## Data Exploration
 We did a further exploration on our dataset to familiarize ourselves with its variables.
 
-![Airbnb Pricing Across Neighborhoods](img/neighborhoodprice.png)
+![](img/neighborhoodprice.png)
 
 Our first plot looks at the distribution of prices of Airbnb for different Seattle neighborhoods. Noticably, the median price for the Downtown neighborhood is highest, while the lowest median price seems to be in Delridge. Since Downtown Seattle is a hub for tourist activity, this could be indicative of commercialization.
 
-![Room Types Across Neighborhoods](img/neighborhoodroomtype.png)
+![](img/neighborhoodroomtype.png)
 
-Next, we explore the distribution of room types in Airbnbs across neighborhoods. According to InsideAirbnb, depending on the room type of an airbnb listing, the property could be being used more like a hotel, or be taking away potential housing for people in the area. This is because if an owner is renting out an entire house or apartment, it implies the property is one they do not actually live in, as opposed to an owner who is merely renting out a room in their home.
+Next, we explore the distribution of room types in Airbnbs across neighborhoods. According to InsideAirbnb, depending on the room type of an airbnb listing, the property could be being used more like a hotel, or be taking away potential housing for people in the area. This is because if an owner is renting out an entire house or apartment, it implies the property is one they do not actually live in, as opposed to an owner who is merely renting out a room in their home. It appears that for nearly all neighborhoods, the "entire house/apartment" room type makes up the bulk of listings. Additionally, Ballard and Queen Anne appear to have the most listings overall, which is surprising considering their average pricing shown above.
 
-![Room Types Pricing](img/roomtypeprice.png)
+![](img/roomtypeprice.png)
 We also can break down the pricing for the various room types, and unsurprisingly, the entire house or apartment listings are much more expensive, which means they would be more lucrative for their owners.
 
-![Number of Listings Per Host](img/listingsperhost.png)
+![](img/listingsperhost.png)
 
 We also break down the number of listings held by Airbnb hosts in Seattle. While the majority of owners appear to only have a handful of listings, there are also quite a few hosts who own dozens or more properties. when we break the listings down by how many multilistings are held, we can see exactly how many of the properties in Seattle are owned by the same owner.
 
-![Most Airbnb Listings Held Per Host](img/mostlistings.png)
+![](img/mostlistings.png)
 
-Here is a table displaying the most listings held by various hosts in Seattle. From this table, we can see that the top hosts have a shocking number of listings, providing evidence towards their Airbnb account being run like a business. Many of the host names seem to resemble business names as well.
+Here is a table displaying the most listings held by various hosts in Seattle. From this table, we can see that the top hosts have a shocking number of listings, providing evidence towards their Airbnb account being run like a business. Many of the host names seem to resemble business names as well, making their true purposes evident.
 
-![Multi-Listing Pie Chart](img/multilistings.png) 
+![](img/multilistings.png) 
 
 This pie chart shows that the number of properties which are under a multilisting owner almost match those that are just single listings, taking up nearly half of the chart.
 
-![Occupancy Rates in Seattle](img/occupancyrate.png)
-Using InsideAirbnb's metric based on average number of reviews per month and nights spent in a listing per year, we calculated occupancy rates for properties in Seattle. We followed InsideAirbnb's justification for capping the occupancy rate, as they use "a maximum occupancy rate of 70% to ensure the occupancy model does not produce artifically high results based on the available data". It is clear that there is a downward trend of occupancy rates for listings, and yet at the peak capacity for occupancy, the number of listings with high occupancy skyrockets.
+![](img/occupancyrate.png)
+Using InsideAirbnb's metric based on average number of reviews per month and nights spent in a listing per year, we calculated occupancy rates for properties in Seattle. We followed InsideAirbnb's justification for capping the occupancy rate, as they use "a maximum occupancy rate of 70% to ensure the occupancy model does not produce artifically high results based on the available data". It is clear that there is a downward trend of occupancy rates for listings, and yet at the peak capacity for occupancy, the number of listings with high occupancy skyrockets. High occupancy rates can be indicative of how lucrative properties would be for Airbnb owners, and knowing that many Airbnb properties are entire houses/apts, they are also further evidence these properties do not actually have their owners living in them.
 
 
 
@@ -59,7 +59,7 @@ source("AirBnb.R")
 
 ### Distribution of Airbnb homes around Seattle
 
-This graph shows the distribution of Airbnb homes around the Seattle area. Each dot represents a listing and you can hover over each listing to get more information. Each listing is also colour accoiding to the number of bedrooms. The first thing noticable is that most listings are listings for single bedrooms as there is an ambundance of yellow dots. We can also see that the listings are focused near the central Seattle area as this is where most business activity takes place
+This graph shows the distribution of Airbnb homes around the Seattle area. Each dot represents a listing and you can hover over each listing to get more information. Each listing is also colour accoiding to the number of bedrooms. The first thing noticable is that most listings are listings for single bedrooms as there is an ambundance of yellow dots. We can also see that the listings are focused near the central Seattle area as this is where most business activity takes place.
 
 ```{r}
 leaflet_map
