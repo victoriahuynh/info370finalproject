@@ -10,14 +10,19 @@ knitr::opts_chunk$set(echo = TRUE)
 > Jill Nguyen, Pooja Ramanathan, Shiva Rithwick, Victoria Huynh
 
 ## Introduction
-As home-sharing rental sites become more popular, the housing market of urban areas change more and more. Gentrification is a rising problem in many American cities today. While gentrification is usually attributed to an influx of new affluent residents into a neighborhood, the purchase of properties in a neighborhood solely to house short-term visitors may also be an overlooked factor. Using this resource, we want to answer **QUESTION HERE**.  
-In this resource, we will specifically look at Airbnb's impact on Seattle's neighborhoods{, starting from 2011}.  
+As home-sharing rental sites become more popular, the housing market of urban areas change more and more. Gentrification is a rising problem in many American cities today. While gentrification is usually attributed to an influx of new affluent residents into a neighborhood, the purchase of properties in a neighborhood solely to house short-term visitors may also be an overlooked factor. Since gentrification is a difficult topic to address, we decided to instead focus on the general state of the Airbnb market in Seattle today and how it may be indicative of an overall commercialization of the short-term rental market.
+
+Using this resource, we want to answer **how various facets of the Seattle Airbnb market reflect an overall commercialization of properties in the area**.  
+
+In this resource, we will specifically look at the Airbnb market in various Seattle neighborhoods from 2011 to 2019.  
 
 ## Our Dataset
-The dataset we are using is provided by [Inside Airbnb](http://insideairbnb.com/get-the-data.html) (2019). It includes information about Airbnb listings in Seattle. It has been cleaned to remove columns not relevant to our research. {We also added X new columns: `x`, `x`, and `x`. (add if true)}  
-Below is a sample of our dataset.  
-{DATASET HEAD}  
-{WHAT EACH COLUMN REPRESENTS BUT MAYBE NOT BC THERE ARE 65}
+The dataset we are using is provided by [Inside Airbnb](http://insideairbnb.com/get-the-data.html) (2019). It includes information about Airbnb listings in Seattle. It has been cleaned to remove columns not relevant to our research. We have also added new columns calculated based on Inside Airbnb's algorithms for analysis: `nights_per_year`, and `occupancy_rate`.
+
+Below is a sample of our dataset. 
+
+![](img/datahead.png)
+
 
 ## Data Exploration
 We did a further exploration on our dataset to familiarize ourselves with its variables.
@@ -26,11 +31,15 @@ We did a further exploration on our dataset to familiarize ourselves with its va
 
 ![Room Types Across Neighborhoods](img/neighborhoodroomtype.png)
 
+![Room Types Pricing](img/roomtypeprice.png)
+
 ![Number of Listings Per Host](img/listingsperhost.png)
 
 ![Most Airbnb Listings Held Per Host](img/mostlistings.png)
 
 ![Multi-Listing Pie Chart](img/multilistings.png) 
+
+![Occupancy Rates in Seattle](img/occupancyrate.png)
 
 
 ```{r include=FALSE}
