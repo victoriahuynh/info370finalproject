@@ -9,28 +9,46 @@ knitr::opts_chunk$set(echo = TRUE)
 
 > Jill Nguyen, Pooja Ramanathan, Shiva Rithwick, Victoria Huynh
 
+
 ## Introduction
-As home-sharing rental sites become more popular, the housing market of urban areas change more and more. Gentrification is a rising problem in many American cities today. While gentrification is usually attributed to an influx of new affluent residents into a neighborhood, the purchase of properties in a neighborhood solely to house short-term visitors may also be an overlooked factor. Using this resource, we want to answer **QUESTION HERE**.  
-In this resource, we will specifically look at Airbnb's impact on Seattle's neighborhoods{, starting from 2011}.  
+As home-sharing rental sites become more popular, the housing market of urban areas change more and more. Gentrification is a rising problem in many American cities today. While gentrification is usually attributed to an influx of new affluent residents into a neighborhood, the purchase of properties in a neighborhood solely to house short-term visitors may also be an overlooked factor. Since gentrification is a difficult topic to address, we decided to instead focus on the general state of the Airbnb market in Seattle today and how it may be indicative of an overall commercialization of the short-term rental market.
+
+Using this resource, we want to answer **how various facets of the Seattle Airbnb market reflect an overall commercialization of properties in the area**.  
+
+In this resource, we will specifically look at the Airbnb market in various Seattle neighborhoods from 2011 to 2019.  
 
 ## Our Dataset
 The dataset we are using is provided by [Inside Airbnb](http://insideairbnb.com/get-the-data.html) (2019). It includes information about Airbnb listings in Seattle. It has been cleaned to remove columns not relevant to our research. {We also added X new columns: `x`, `x`, and `x`. (add if true)}  
-Below is a sample of our dataset.  
-{DATASET HEAD}  
-{WHAT EACH COLUMN REPRESENTS BUT MAYBE NOT BC THERE ARE 65}
+
 
 ## Data Exploration
 We did a further exploration on our dataset to familiarize ourselves with its variables.
 
 ![Airbnb Pricing Across Neighborhoods](img/neighborhoodprice.png)
 
+Our first plot looks at the distribution of prices of Airbnb for different Seattle neighborhoods. Noticably, the median price for the Downtown neighborhood is highest, while the lowest median price seems to be in Delridge.
+
 ![Room Types Across Neighborhoods](img/neighborhoodroomtype.png)
 
+Next, we explore the distribution of room types in Airbnbs across neighborhoods. According to InsideAirbnb, depending on the room type of an airbnb listing, the property could be being used more like a hotel, or be taking away potential housing for people in the area.
+
+![Room Types Pricing](img/roomtypeprice.png)
+We also can break down the pricing for the various room types, and unsurprisingly, the entire house or apartment listings are much more expensive.
+
 ![Number of Listings Per Host](img/listingsperhost.png)
+We also break down the number of listings held by Airbnb hosts in Seattle. While the majority of owners appear to only have one listing, when you break the listings down by how many multilistings are held, the results look drastically different.
 
 ![Most Airbnb Listings Held Per Host](img/mostlistings.png)
 
+Here is a table displaying the most listings held by various hosts in Seattle. From this table, we can see that the top hosts have a shocking number of listings, providing evidence towards their Airbnb account being run like a business. Many of the host names seem to resemble business names as well.
+
 ![Multi-Listing Pie Chart](img/multilistings.png) 
+
+This pie chart shows that the number of properties which are under a multilisting owner nearly outnumber those that are just single listings.
+
+![Occupancy Rates in Seattle](img/occupancyrate.png)
+Using InsideAirbnb's metric based on average number of reviews per month and nights spent in a listing per year, we calculated occupancy rates for properties in Seattle. It is clear that there is a downward trend of occupancy rates for listings, and yet at the peak capacity for occupancy, the number of listings with high occupancy skyrockets.
+
 
 
 ```{r include=FALSE}
@@ -58,5 +76,19 @@ corrplot(plot_30, type = 'full', tl.col = 'black', method="shade")
 
 
 ## Modeling
-We used {MODEL} model to predict whether or not a listing was used for personal{FIX WORDING?} or commercial purposes.  
-{INFO ABOUT MODEL}
+
+
+Here we are taking the liberty to make few simplifications regarding the data for the purpose of modeling. To perform **Spearman and Kendall-Tau Correlation** Analysis, we simplify the information regarding the data that the values of the predictors have some kind of order to them, that is, they're either increasing or decreasing. These Spearman and Kendall Coefficients helps us determine if the predictor has a non-linear relationship with the response variable.
+
+We decided to chose *Poisson Regression* because it is useful for predicting an outcome variable representing counts from a set of continuous predictor variables. We performed the analysis using *Negative Binomial Regression* as well, Negative binomial regression can be used for over-dispersed count data, that is when the conditional variance exceeds the conditional mean. However, Negative binomial regression can be considered as a generalization of Poisson regression since it has the same mean structure as Poisson regression and it has an extra parameter to model the over-dispersion. If the conditional distribution of the outcome variable is over-dispersed, the confidence intervals for Negative binomial regression are likely to be narrower as compared to those from Poisson regression. Thus, our outputs were very similar, and Poisson regression outperformed negative binomial regression by a very narrow margin.
+
+We used **Recursive Feature Elimination Method** to obtain the best subset of the feature variables. It is a greedy optimization algorithm which aims to find the best performing feature subset. It repeatedly creates models and keeps aside the best or the worst performing feature at each iteration. It constructs the next model with the left features until all the features are exhausted. It then ranks the features based on the order of their elimination. We used Recursive Feature Elimination Method instead of Forward Selection method because we learned that the former provides more accurate and detailed feature selection algorithm, and we wanted to experiment a new method as well, in fact, it turned out very successful.
+
+![Multi-Listing Pie Chart](img/Rplot2.jpeg) 
+
+![Imp Vars](img/Rplot.jpeg) 
+![Imp Vars](img/Rplot01.jpeg) 
+![Imp Vars](img/Rplot4.jpeg) 
+
+
+
