@@ -51,7 +51,6 @@ leaflet_map
 Correlation heatmap plots are used to visualize association matrices. The color indicates the sign of the coefficient and the intensity of the color increases proportionally with the magnitude of the correlation coefficient. We can use this graphs to remove variables with high correlation to either mutate them into one, or pick the better variable. This also allows use to see which variables have no correlation with any of the variables and thus remove them.
 
 ```{r}
-beds_plot
 corrplot(plot_10, type = 'full', tl.col = 'black', method="shade")
 corrplot(plot_20, type = 'full', tl.col = 'black', method="shade")
 corrplot(plot_30, type = 'full', tl.col = 'black', method="shade")
